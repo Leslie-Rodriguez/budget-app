@@ -17,20 +17,29 @@ import { PlannedExpense } from './modules/planned-expense/entities/planned-expen
 import { PlannedIncome } from './modules/planned-income/entities/planned-income.entity';
 import { RealExpense } from './modules/real-expense/entities/real-expense.entity';
 import { RealIncome } from './modules/real-income/entities/real-income.entity';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
-    "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
-    "username": "root",
-    "password": "mariaP123",
-    "database": "expenses2",
-    "entities": [User, Budget, Category, PlannedExpense, PlannedIncome, RealExpense, RealIncome],
-    "synchronize": true
-    }), 
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'mariaP123',
+      database: 'expenses2',
+      entities: [
+        User,
+        Budget,
+        Category,
+        PlannedExpense,
+        PlannedIncome,
+        RealExpense,
+        RealIncome,
+      ],
+      synchronize: true,
+    }),
 
     UserModule,
     BudgetModule,
@@ -39,6 +48,7 @@ import { RealIncome } from './modules/real-income/entities/real-income.entity';
     PlannedIncomeModule,
     RealExpenseModule,
     RealIncomeModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
