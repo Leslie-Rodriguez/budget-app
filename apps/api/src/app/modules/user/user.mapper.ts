@@ -8,10 +8,10 @@ import { User } from "./entities/user.entity";
 export class UserMapper {
     
     dtoToEntity(dto: CreateUserDto | UpdateUserDto): User {
-        return new User(dto.name, dto.username, dto.password, dto.last_name)
+        return new User(dto.name, dto.last_name, dto.username, dto.password)
     }
 
     entityToDto(entity: User): CreateUserDto {
-        return new CreateUserDto(entity.name, entity.username, entity.password, entity.last_name);
+        return new CreateUserDto(entity.name, entity.last_name, entity.username, entity.password);
     }
 }

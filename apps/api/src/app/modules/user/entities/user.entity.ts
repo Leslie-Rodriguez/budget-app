@@ -19,6 +19,7 @@ export class User {
   @Column()
   password: string;
 
+
   @ManyToMany(() => Budget, budget => budget.user)
   budget : Budget
 
