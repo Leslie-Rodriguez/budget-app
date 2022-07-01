@@ -1,0 +1,27 @@
+.example-container {
+    width: 100%;
+    height: 94%
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.example-sidenav-content {
+    padding: 2.0em;
+}
+
+section {
+    display: table;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 250px;
+  }
+  
+.example-button-row {
+    padding: 0.5em;
+    margin: 10px;
+}
+.example-button-row > button {
+    width: 100%;
+}
