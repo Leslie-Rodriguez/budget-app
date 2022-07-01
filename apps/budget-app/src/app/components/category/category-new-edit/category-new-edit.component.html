@@ -1,0 +1,34 @@
+<p>
+    <mat-toolbar>
+      <span>Category</span>
+    </mat-toolbar>
+</p>
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput [errorStateMatcher]="matcher"
+           placeholder="Ex. Electricity Bills" [formControl]="nameFormControl">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Name of the category is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Description</mat-label>
+    <input type="text" matInput [errorStateMatcher]="matcher"
+           placeholder="Ex. Electricity Bills for the house" [formControl]="descFormControl">
+    <mat-error *ngIf="descFormControl.hasError('required')">
+      Description of the category is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+
+<section>
+    <div class="example-button-row">
+      <button mat-raised-button color="accent">Accept</button>
+      <button mat-raised-button color="warn">Cancel</button>
+    </div>
+</section>

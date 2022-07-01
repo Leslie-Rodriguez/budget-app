@@ -1,0 +1,38 @@
+section {
+    display: table;
+  }
+
+  .example-form {
+    width: 100%;
+    display: flex;
+  }
+  .example-full-width {
+    width: 100%;
+    margin: 2.0em;
+  }
+
+  
+  section {
+    width: 100%;
+  }
+  
+  .example-button-row {
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .example-button-row > button {
+    width: 10.0em;
+    border-radius: 1.5em;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
